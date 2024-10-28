@@ -1,0 +1,2519 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "Newstar Auto Threat Model",
+    "owner": "Pooya Molai",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": [
+          {
+            "shape": "edge",
+            "attrs": {
+              "line": {
+                "targetMarker": {
+                  "name": "block",
+                  "width": 12,
+                  "height": 8
+                }
+              }
+            },
+            "id": "1d9a43b3-77c1-4f30-89a8-dd12971a376e",
+            "zIndex": 0,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "source": {
+              "cell": "bb698110-022a-440d-8dbb-7956a3555dc3",
+              "port": "9dd669d9-7b82-4fd0-9e4a-7f1edc3993df"
+            },
+            "target": {
+              "x": 330,
+              "y": 60
+            }
+          },
+          {
+            "position": {
+              "x": 785,
+              "y": 10
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "CRM"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2132ad7b-5eed-419f-abe4-954440a583aa"
+                },
+                {
+                  "group": "right",
+                  "id": "9dd669d9-7b82-4fd0-9e4a-7f1edc3993df"
+                },
+                {
+                  "group": "bottom",
+                  "id": "673d672d-a0a1-496c-8f2c-02866882a1bd"
+                },
+                {
+                  "group": "left",
+                  "id": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+                }
+              ]
+            },
+            "id": "0f0c29f2-e28b-4c4d-b4f3-927df6a6df5f",
+            "data": {
+              "type": "tm.Process",
+              "name": "CRM",
+              "description": "Stores and manages customer data, including personal details, sales pipeline, and service interactions.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "51af9f5f-a824-4b00-bed7-a21c8838e08e",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker impersonates an authorized user to gain access to the CRM.",
+                  "mitigation": "Implement strong user authentication mechanisms, such as Multi-Factor Authentication (MFA) and Single Sign-On (SSO). Regularly review user access rights.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "8/10"
+                },
+                {
+                  "id": "2020bd18-ca1d-4c3a-94fa-e29a7df57d31",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker modifies customer data within the CRM, such as altering sales records or customer information.",
+                  "mitigation": "Use data integrity checks, digital signatures, and role-based access control (RBAC) to prevent unauthorized data changes. Implement logging and alerting for any unauthorized data modification attempts.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "8/10"
+                },
+                {
+                  "id": "7327349d-acbf-4947-8aca-534f7f1cf392",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A user denies having performed a particular action within the CRM, such as modifying customer records.",
+                  "mitigation": "Enable logging and auditing within Salesforce to track user actions. Use non-repudiation techniques such as maintaining secure, immutable logs to provide proof of actions.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "6/10"
+                },
+                {
+                  "id": "5020b99d-a5ce-465c-89a0-160faeab59d2",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive customer data (e.g., PII, purchase history, preferences) is disclosed to unauthorized users.",
+                  "mitigation": "Ensure data encryption both at rest and in transit. Enforce least privilege access, meaning only authorized users can access sensitive information. Monitor data access with alerts for unusual activity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "9/10"
+                },
+                {
+                  "id": "07a04ba1-a3d6-4bfd-a83d-c82fa1c37c2d",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker could overload the CRM system, causing it to become unresponsive or unavailable.",
+                  "mitigation": "Implement rate limiting, request throttling, and ensure Salesforce’s cloud infrastructure has DoS protection measures. Utilize cloud-based distributed denial of service (DDoS) protection services.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "5/10"
+                },
+                {
+                  "id": "b559ec24-21b8-4c58-a151-2b24ddaf990a",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker or unauthorized user exploits a vulnerability to gain higher-level privileges in the CRM system.",
+                  "mitigation": "Use RBAC to ensure users have only the permissions required for their roles. Regularly conduct security assessments and patch management to mitigate vulnerabilities.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "8/10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 785,
+              "y": 300
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Third-Party\n Scheduling\n System"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 2,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2132ad7b-5eed-419f-abe4-954440a583aa"
+                },
+                {
+                  "group": "right",
+                  "id": "9dd669d9-7b82-4fd0-9e4a-7f1edc3993df"
+                },
+                {
+                  "group": "bottom",
+                  "id": "673d672d-a0a1-496c-8f2c-02866882a1bd"
+                },
+                {
+                  "group": "left",
+                  "id": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+                }
+              ]
+            },
+            "id": "02896d79-3f47-43e5-89ae-727ea5c25e90",
+            "data": {
+              "type": "tm.Process",
+              "name": "Third-Party\n Scheduling\n System",
+              "description": "Used for managing service appointments, vehicle deliveries, and maintenance scheduling.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "d169d803-ebb8-4dbf-905d-3d4a49467403",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker impersonates a legitimate user to gain access to the scheduling system.",
+                  "mitigation": " Implement MFA and secure authentication protocols for all users. Regularly audit access controls to prevent unauthorized access.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "8/10"
+                },
+                {
+                  "id": "0334c2c1-8137-4f81-84e3-140f5ee9ffe8",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker modifies appointment or vehicle delivery data in the scheduling system.",
+                  "mitigation": "Enforce data integrity checks, use digital signatures, and employ RBAC to prevent unauthorized data modification. Log and monitor all system changes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "8/10"
+                },
+                {
+                  "id": "1ef70015-9551-45a4-82e2-8b56b9ccf6f0",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A user denies having scheduled or modified appointments.",
+                  "mitigation": "Maintain secure, immutable logs of all actions taken in the scheduling system to provide proof of actions and enable audits.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "6/10"
+                },
+                {
+                  "id": "992645a6-c819-4226-b721-880baf3c81b3",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive scheduling information is disclosed to unauthorized individuals.",
+                  "mitigation": "Encrypt data at rest and in transit, and enforce strict access controls. Monitor data access with alerts for any suspicious activity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "9/10"
+                },
+                {
+                  "id": "967ee1cd-1bf6-4efc-8d81-2861bb928fed",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker overloads the scheduling system, making it unavailable for legitimate users.",
+                  "mitigation": "Implement rate limiting and request throttling. Ensure the third-party provider has robust DDoS protection measures in place.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "5/10"
+                },
+                {
+                  "id": "84716219-8dea-454e-ab36-5d95b55ed397",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker exploits a vulnerability to gain higher-level access within the scheduling system.",
+                  "mitigation": "Implement RBAC to restrict access to administrative functions. Conduct regular security assessments and patch any vulnerabilities promptly.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "8/10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
+            },
+            "children": [
+              "57ade622-60ce-46d0-a4e1-f31eb4d64c91"
+            ]
+          },
+          {
+            "position": {
+              "x": 20,
+              "y": 170
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Cloud Storage"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 3,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "769974fd-01c5-4512-a2ce-f42462c6b01e"
+                },
+                {
+                  "group": "right",
+                  "id": "280407b6-4fff-4528-a6ed-d6d23c80f14c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "901eec79-eab7-42ce-9189-8e5faed693d9"
+                },
+                {
+                  "group": "left",
+                  "id": "10d590cf-f244-4748-b73e-67025b6fefd5"
+                }
+              ]
+            },
+            "id": "31c688e8-f2aa-4d12-be72-3a6747f85b8b",
+            "data": {
+              "type": "tm.Store",
+              "name": "Cloud Storage",
+              "description": "Stores customer data that has been migrated from on-premise servers for scalability and accessibility.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "c83db412-d243-4322-86e4-5352038e83e5",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker impersonates an authorized user to gain access to cloud storage.",
+                  "mitigation": " Enforce strong user authentication mechanisms, including Multi-Factor Authentication (MFA) and Single Sign-On (SSO). Regularly audit access control policies.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "8/10"
+                },
+                {
+                  "id": "d66c09be-ad46-42e9-a220-77de7f65fd33",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "An attacker modifies stored data, such as customer information or service records.",
+                  "mitigation": "Use encryption, data integrity checks, and version control to protect stored data. Implement logging to detect unauthorized modifications.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "8/10"
+                },
+                {
+                  "id": "3c672dfe-97d8-420b-8c90-1778d0836701",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A user denies having made changes or accessed cloud-stored data.",
+                  "mitigation": "Maintain secure, immutable logs of all activities and actions taken in cloud storage. Implement non-repudiation measures to track user activities.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "6/10"
+                },
+                {
+                  "id": "60501c97-485e-4061-8127-a9d96978cbe9",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive customer data stored in the cloud is disclosed to unauthorized individuals.",
+                  "mitigation": "Encrypt data both at rest and in transit. Enforce strict access controls with least privilege principles. Use monitoring tools to detect unusual access patterns.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "9/10"
+                },
+                {
+                  "id": "41e6c54d-7612-427c-9369-262b5e81bb93",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker floods the cloud service, making data inaccessible to legitimate users.",
+                  "mitigation": "Implement rate limiting, request throttling, and ensure the cloud provider has DDoS protection in place.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "5/10"
+                },
+                {
+                  "id": "8eaa8e41-dcb3-4be1-bcdb-365dcce9d6d2",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 18,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 2,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 485,
+              "y": 10
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "departments \ndevices"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 4,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2132ad7b-5eed-419f-abe4-954440a583aa"
+                },
+                {
+                  "group": "right",
+                  "id": "9dd669d9-7b82-4fd0-9e4a-7f1edc3993df"
+                },
+                {
+                  "group": "bottom",
+                  "id": "673d672d-a0a1-496c-8f2c-02866882a1bd"
+                },
+                {
+                  "group": "left",
+                  "id": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+                }
+              ]
+            },
+            "id": "8a63dea2-1af8-4c2f-b485-a6a667f5a4fa",
+            "data": {
+              "type": "tm.Process",
+              "name": "departments \ndevices",
+              "description": "Laptops, desktops, and tablets used by service staff to access Salesforce, scheduling systems, and loyalty program data.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "cd82e94d-8a1a-4b56-9eec-9160c38a50ea",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker impersonates a legitimate user by gaining access to service department devices.",
+                  "mitigation": "Implement strong user authentication mechanisms, including password protection and Multi-Factor Authentication (MFA). Enforce policies for secure device use.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "8/10"
+                },
+                {
+                  "id": "66a8c97c-ca96-4586-ac27-f24d569b3850",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker gains physical access to a device and modifies stored data or software.",
+                  "mitigation": "Use full-disk encryption to protect stored data, enforce secure boot settings, and implement endpoint security software to detect unauthorized changes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "8/10"
+                },
+                {
+                  "id": "a8427b19-98bc-49ed-94ac-a0f9d38e250e",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A user denies actions taken on a service department device, such as accessing or modifying customer data.",
+                  "mitigation": "Enable logging and auditing on service department devices. Use tamper-evident logs to provide proof of actions taken.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "6/10"
+                },
+                {
+                  "id": "af26f512-8fd6-4dde-b53f-236a5e6b7b4e",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive information accessed through service department devices is exposed to unauthorized individuals.",
+                  "mitigation": "Encrypt data stored locally on devices and ensure that network connections are secured with VPNs. Train staff on proper handling of sensitive data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "9/10"
+                },
+                {
+                  "id": "83906071-ad84-4c16-b6a0-674d2a6f36c6",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker physically damages or disables a device, rendering it unusable.",
+                  "mitigation": "Implement device tracking, ensure regular backups of critical data, and have replacement devices readily available.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "5/10"
+                },
+                {
+                  "id": "d58600d9-c1d5-4bbd-8c84-d66fe2fba37e",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker exploits vulnerabilities in the device or its software to gain elevated privileges.",
+                  "mitigation": "Keep devices and software up to date with security patches. Use RBAC to limit the privileges of users and enforce least privilege principles.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "8/10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 210,
+              "y": 20
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Network \nInfrastructure"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 5,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2132ad7b-5eed-419f-abe4-954440a583aa"
+                },
+                {
+                  "group": "right",
+                  "id": "9dd669d9-7b82-4fd0-9e4a-7f1edc3993df"
+                },
+                {
+                  "group": "bottom",
+                  "id": "673d672d-a0a1-496c-8f2c-02866882a1bd"
+                },
+                {
+                  "group": "left",
+                  "id": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+                }
+              ]
+            },
+            "id": "bb698110-022a-440d-8dbb-7956a3555dc3",
+            "data": {
+              "type": "tm.Process",
+              "name": "Network \nInfrastructure",
+              "description": "Internal network that connects service staff devices to the cloud-based CRM, scheduling systems, and loyalty program.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "df3611a9-0f8d-4cc8-86b1-05c5fc61e311",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker impersonates a legitimate device or user within the network.",
+                  "mitigation": "Implement Network Access Control (NAC) to authenticate devices, use strong authentication protocols, and employ encryption for communication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "8/10"
+                },
+                {
+                  "id": "daf954bd-6e2c-4560-97fe-2a6ae3af475a",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker modifies data packets in transit across the network.",
+                  "mitigation": "Use encryption protocols like TLS to protect data in transit. Implement integrity checks and secure routing mechanisms to prevent tampering.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "8/10"
+                },
+                {
+                  "id": "297852b9-9014-4a08-9462-518eaa151548",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A network user denies having performed certain actions, such as accessing resources or modifying network configurations.",
+                  "mitigation": "Enable logging of all network activities, including access and configuration changes. Use tamper-evident logs and secure storage for audit trails.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": "6/10"
+                },
+                {
+                  "id": "122e17b4-7bcc-4d63-a5a9-61dd678a0731",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive data transmitted over the network is intercepted by an unauthorized party.",
+                  "mitigation": "Encrypt all sensitive data in transit using secure protocols (e.g., TLS/IPsec). Implement network segmentation to reduce the risk of data interception.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": "9/10"
+                },
+                {
+                  "id": "06de0a33-dbeb-4b6f-a863-a6476817d3b5",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An attacker floods the network with excessive traffic, making it unavailable to legitimate users.",
+                  "mitigation": "Deploy firewalls, intrusion detection/prevention systems (IDS/IPS), and rate limiting to mitigate DoS attacks. Utilize cloud-based DDoS protection services.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": "8/10"
+                },
+                {
+                  "id": "30afafef-cc47-4abd-a5ae-6b167decc1d2",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker gains elevated privileges within the network by exploiting vulnerabilities.",
+                  "mitigation": "Use RBAC to limit user privileges. Regularly update network devices with security patches and conduct vulnerability assessments to address potential weaknesses.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": "8/10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 225,
+              "y": 295
+            },
+            "size": {
+              "width": 110,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Email and\nMessaging\nSystem"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 6,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2132ad7b-5eed-419f-abe4-954440a583aa"
+                },
+                {
+                  "group": "right",
+                  "id": "9dd669d9-7b82-4fd0-9e4a-7f1edc3993df"
+                },
+                {
+                  "group": "bottom",
+                  "id": "673d672d-a0a1-496c-8f2c-02866882a1bd"
+                },
+                {
+                  "group": "left",
+                  "id": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+                }
+              ]
+            },
+            "id": "53ab495f-ec42-47a2-ab01-70973d92ce17",
+            "data": {
+              "type": "tm.Process",
+              "name": "Email and\nMessaging\nSystem",
+              "description": "Used by sales and service staff to communicate with customers regarding appointments, loyalty rewards, and follow-up services.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "1dc767ea-f370-4aa4-af04-2d273010ef70",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker impersonates a legitimate user to gain access to email or messaging systems.\n\n",
+                  "mitigation": "Implement MFA for email and messaging access. Use email authentication protocols such as SPF, DKIM, and DMARC to prevent spoofing.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": "8/10"
+                },
+                {
+                  "id": "7c4bf2a0-30a2-41f5-95f4-d79891984b82",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker modifies the content of emails or messages in transit.\n\n",
+                  "mitigation": " Encrypt emails and messages in transit using secure protocols like TLS. Use digital signatures to verify the integrity of messages.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 32,
+                  "score": "8/10"
+                },
+                {
+                  "id": "ec8312bc-8dec-4fa2-8344-c75a4c63f335",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A user denies having sent or received a particular email or message.",
+                  "mitigation": "Use digital signatures and maintain secure, tamper-proof logs of all communication activities.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 33,
+                  "score": "6/10"
+                },
+                {
+                  "id": "fafe1281-b57d-4cc6-9f58-9f08c8a8c5e8",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive information shared via email or messaging is exposed to unauthorized parties.",
+                  "mitigation": "Encrypt emails and messages both at rest and in transit. Implement access controls to restrict who can view or send sensitive information.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 34,
+                  "score": "9/10"
+                },
+                {
+                  "id": "7cdfe581-4977-4a8c-8001-700f3bce075d",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker floods the email or messaging systems, making them unavailable to legitimate users.",
+                  "mitigation": "Implement rate limiting, spam filtering, and ensure that the email service provider has anti-DDoS measures in place.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 35,
+                  "score": "5/10"
+                },
+                {
+                  "id": "36ced60a-c082-4711-976c-174474e2b285",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker exploits vulnerabilities in the email or messaging system to gain elevated privileges.",
+                  "mitigation": "Use RBAC to limit user privileges. Regularly update and patch email and messaging systems to address vulnerabilities.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 36,
+                  "score": "8/10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 480,
+              "y": 295
+            },
+            "size": {
+              "width": 110,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Loyalty \nProgram \nManagement"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 7,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2132ad7b-5eed-419f-abe4-954440a583aa"
+                },
+                {
+                  "group": "right",
+                  "id": "9dd669d9-7b82-4fd0-9e4a-7f1edc3993df"
+                },
+                {
+                  "group": "bottom",
+                  "id": "673d672d-a0a1-496c-8f2c-02866882a1bd"
+                },
+                {
+                  "group": "left",
+                  "id": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+                }
+              ]
+            },
+            "id": "542bd0da-9d7e-4fdd-8dc9-6bad2fb3cee2",
+            "data": {
+              "type": "tm.Process",
+              "name": "Loyalty \nProgram \nManagement",
+              "description": "Manages customer loyalty rewards, service credits, milestones, and owner’s club benefits.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "282df38d-0982-4afb-b082-633003a6e624",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker impersonates a legitimate customer to gain access to loyalty rewards or manipulate referral credits.",
+                  "mitigation": "Enforce MFA for customer accounts and use CAPTCHA to prevent automated attacks. Regularly monitor login attempts for unusual activity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 37,
+                  "score": "8/10"
+                },
+                {
+                  "id": "24709993-6529-42d8-b07a-e77af5e479e5",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker modifies loyalty program data, such as rewards balance or referral information.",
+                  "mitigation": "Use data integrity checks, implement encryption for stored data, and utilize role-based access control (RBAC) to restrict modification rights.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 38,
+                  "score": "8/10"
+                },
+                {
+                  "id": "86ee576d-db21-4da3-977a-ca6363a6cb8c",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A user denies performing actions related to loyalty program participation, such as redeeming rewards or referring others.",
+                  "mitigation": "Maintain secure, tamper-proof logs of all loyalty program transactions. Use digital signatures to verify actions taken.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 39,
+                  "score": "6/10"
+                },
+                {
+                  "id": "2d8ffbe1-5c5f-4634-80d5-9e5489922b38",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive customer data, including service history and loyalty rewards, is disclosed to unauthorized parties.",
+                  "mitigation": "Encrypt sensitive data both at rest and in transit. Implement access controls to ensure only authorized users can view or modify customer data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 40,
+                  "score": "9/10"
+                },
+                {
+                  "id": "3077a189-41ff-4ab1-8d31-a7fb52eaaacf",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker overloads the loyalty program system, making it unavailable to legitimate customers and staff.",
+                  "mitigation": "Implement rate limiting, request throttling, and ensure the loyalty program service provider has anti-DDoS measures in place.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 41,
+                  "score": "5/10"
+                },
+                {
+                  "id": "62c23e6e-d70c-4440-ba56-0f753e38991e",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker exploits vulnerabilities to gain elevated privileges in the loyalty program system.",
+                  "mitigation": "Use RBAC to limit user privileges and enforce the principle of least privilege. Regularly conduct security assessments and apply patches promptly.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 42,
+                  "score": "8/10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "Data such as service history and customer interactions flows to/from the Loyalty Program Management System to maintain consistency.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "5cbc9552-eae2-4408-99db-7558e821732e",
+            "source": {
+              "cell": "0f0c29f2-e28b-4c4d-b4f3-927df6a6df5f",
+              "port": "673d672d-a0a1-496c-8f2c-02866882a1bd"
+            },
+            "target": {
+              "cell": "542bd0da-9d7e-4fdd-8dc9-6bad2fb3cee2",
+              "port": "2132ad7b-5eed-419f-abe4-954440a583aa"
+            },
+            "vertices": [
+              {
+                "x": 635,
+                "y": 200
+              },
+              {
+                "x": 560,
+                "y": 260
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "3e8714a4-ec1f-40d9-8994-38420feba1af",
+            "source": {
+              "x": 360,
+              "y": 30
+            },
+            "target": {
+              "x": 370,
+              "y": 460
+            },
+            "vertices": [
+              {
+                "x": 360,
+                "y": 250
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "13bcb1b3-bf86-4d83-a533-012603c1a082",
+            "source": {
+              "x": 123,
+              "y": 50
+            },
+            "target": {
+              "x": 70,
+              "y": 410
+            },
+            "vertices": [
+              {
+                "x": 200,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "Customer and sales data is stored in Cloud Storage for accessibility and scalability.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "3a384a73-cd5f-45c7-8a88-e9dc12a5460a",
+            "source": {
+              "cell": "31c688e8-f2aa-4d12-be72-3a6747f85b8b",
+              "port": "280407b6-4fff-4528-a6ed-d6d23c80f14c"
+            },
+            "target": {
+              "cell": "0f0c29f2-e28b-4c4d-b4f3-927df6a6df5f",
+              "port": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+            },
+            "vertices": [
+              {
+                "x": 630,
+                "y": 140
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "Customer service requests (appointments, vehicle deliveries) are sent to the Scheduling System. Updates to appointments are synchronized back to Salesforce.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "a8487713-eb42-4080-938d-cc277b317f02",
+            "source": {
+              "cell": "0f0c29f2-e28b-4c4d-b4f3-927df6a6df5f",
+              "port": "673d672d-a0a1-496c-8f2c-02866882a1bd"
+            },
+            "target": {
+              "cell": "02896d79-3f47-43e5-89ae-727ea5c25e90",
+              "port": "2132ad7b-5eed-419f-abe4-954440a583aa"
+            },
+            "vertices": [
+              {
+                "x": 800,
+                "y": 190
+              },
+              {
+                "x": 800,
+                "y": 250
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "Service staff use devices to view and update appointments via the scheduling system.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "e2faf562-f766-417f-a010-b4d4f7d1e038",
+            "source": {
+              "x": 590,
+              "y": 70
+            },
+            "target": {
+              "cell": "02896d79-3f47-43e5-89ae-727ea5c25e90",
+              "port": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+            },
+            "vertices": [
+              {
+                "x": 660,
+                "y": 270
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "a0ef61ce-7237-4946-a478-19e7b07a85b6",
+            "source": {
+              "x": 840,
+              "y": 110
+            },
+            "target": {
+              "cell": "f5da4a4b-ae73-4807-aadc-0bc19657f345",
+              "port": "aff74791-5db0-4fdb-9fd1-9fab43267297"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "Cloud-stored data is accessed for customer management and reporting purposes.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "3701273c-5cbf-4a2d-9dee-a00ae4f76d26",
+            "source": {
+              "x": 140,
+              "y": 203
+            },
+            "target": {
+              "cell": "f5da4a4b-ae73-4807-aadc-0bc19657f345",
+              "port": "aff74791-5db0-4fdb-9fd1-9fab43267297"
+            },
+            "vertices": [
+              {
+                "x": 540,
+                "y": 203
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": " Any interaction relevant to rewards or loyalty points is also logged into the Loyalty Program System.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "d33c0b01-5bcf-469e-893e-99c95cff27e8",
+            "source": {
+              "x": 540,
+              "y": 120
+            },
+            "target": {
+              "cell": "542bd0da-9d7e-4fdd-8dc9-6bad2fb3cee2",
+              "port": "2132ad7b-5eed-419f-abe4-954440a583aa"
+            },
+            "vertices": [
+              {
+                "x": 470,
+                "y": 260
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "410780bf-9c96-44f0-acf6-41e1a6241773",
+            "source": {
+              "cell": "31c688e8-f2aa-4d12-be72-3a6747f85b8b",
+              "port": "769974fd-01c5-4512-a2ce-f42462c6b01e"
+            },
+            "target": {
+              "cell": "bb698110-022a-440d-8dbb-7956a3555dc3",
+              "port": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "6b572368-15c6-4ad2-b255-bfd1970b6bc5",
+            "source": {
+              "x": 340,
+              "y": 60
+            },
+            "target": {
+              "cell": "8a63dea2-1af8-4c2f-b485-a6a667f5a4fa",
+              "port": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "c293d2d9-56bf-451f-889f-770bcf78a137",
+            "source": {
+              "cell": "bb698110-022a-440d-8dbb-7956a3555dc3",
+              "port": "9dd669d9-7b82-4fd0-9e4a-7f1edc3993df"
+            },
+            "target": {
+              "cell": "0f0c29f2-e28b-4c4d-b4f3-927df6a6df5f",
+              "port": "c06f7a0c-1ce4-4311-81e2-5ba1674f4721"
+            },
+            "vertices": [
+              {
+                "x": 560,
+                "y": 170
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "05224748-1d97-494e-913a-925c2bfba8fa",
+            "source": {
+              "x": 260,
+              "y": 130
+            },
+            "target": {
+              "cell": "53ab495f-ec42-47a2-ab01-70973d92ce17",
+              "port": "2132ad7b-5eed-419f-abe4-954440a583aa"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "249762ce-b248-42fb-a764-4c1149bce728",
+            "source": {
+              "x": 1070,
+              "y": 120
+            },
+            "target": {
+              "x": 1110,
+              "y": 248
+            }
+          },
+          {
+            "position": {
+              "x": 1014,
+              "y": 50
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Customer"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 11,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "860e62db-55fb-48d3-9031-dc4037c323bb"
+                },
+                {
+                  "group": "right",
+                  "id": "7bee1873-f045-413e-ae52-c6441451780c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "0134f09a-5390-4f32-8ce1-5befb44e10bc"
+                },
+                {
+                  "group": "left",
+                  "id": "aff74791-5db0-4fdb-9fd1-9fab43267297"
+                }
+              ]
+            },
+            "id": "ea69dad3-abcc-4c85-bc7b-0d1bb6b34b16",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Customer",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1050,
+              "y": 250
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Sales Force"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 12,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "860e62db-55fb-48d3-9031-dc4037c323bb"
+                },
+                {
+                  "group": "right",
+                  "id": "7bee1873-f045-413e-ae52-c6441451780c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "0134f09a-5390-4f32-8ce1-5befb44e10bc"
+                },
+                {
+                  "group": "left",
+                  "id": "aff74791-5db0-4fdb-9fd1-9fab43267297"
+                }
+              ]
+            },
+            "id": "f5da4a4b-ae73-4807-aadc-0bc19657f345",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Sales Force",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 13,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "394933be-598c-4327-82b4-6fde412da4fd",
+            "source": {
+              "x": 330,
+              "y": 70
+            },
+            "target": {
+              "cell": "542bd0da-9d7e-4fdd-8dc9-6bad2fb3cee2",
+              "port": "2132ad7b-5eed-419f-abe4-954440a583aa"
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 42
+  }
+}
